@@ -21,3 +21,15 @@ pnr.sh is open-source and freely licensed under the MIT license.
 ## Building with Docker
 
 A `Dockerfile` is included for easily building and deploying `pnr.sh`. By default, it will listen on `0.0.0.0:8080`. This can be overridden by changing the `PORT` environment variable. 
+
+## Makefile usage
+
+```
+➜  pnrsh git:(main) ✗ go version
+go version go1.20.3 darwin/arm64
+➜  pnrsh git:(main) ✗ make
+go clean
+GOOS=darwin go build -v -o ./pnrsh ./cmd
+➜  pnrsh git:(main) ✗ ./pnrsh 
+2023/05/04 18:36:54 Visit http://0.0.0.0:8080 to use the app!
+```
